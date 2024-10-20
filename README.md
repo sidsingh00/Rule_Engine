@@ -85,13 +85,12 @@ cd <repository_directory>
 To evaluate a rule in Postman, use the following JSON format:
 ```json
 {
-  "ruleId": "66a27c89dca01ec0a644901e",
-  "data": {
-    "age": 40,
-    "department": "Sales",
-    "salary": 60000,
-    "experience": 3
-  }
+    "ast": "6712aae70a270456b0e172ff", 
+    "data": {
+        "age": 35,
+        "salary": 60000,
+        "experience": 3
+    }
 }
 ```
 
@@ -99,7 +98,10 @@ To evaluate a rule in Postman, use the following JSON format:
 To create or combine a rule in Postman, use the following JSON format:
 ```json
 {
-  "rule_string": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
+  "rules": [
+    "age > 48",
+    "experience > 5"
+  ]
 }
 ```
 
