@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link{
+    list-style: none;
+}
+.link a{
+    text-decoration: underline;
+    color: black;
+    font-weight: 700;
+    font-size: 24px;
+}
