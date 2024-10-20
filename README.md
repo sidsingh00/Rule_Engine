@@ -42,3 +42,68 @@ Use MongoDB for storing rules and metadata.
 ```sh
 git clone <repository_url>
 cd <repository_directory>
+
+
+
+
+## Installation and Setup
+
+### Backend
+1. Navigate to the `rule-engine` directory.
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Create a `.env` file and add necessary environment variables, including your database URL:
+   ```plaintext
+   HORA_DATABASE=<your_database_url>
+   ```
+4. Start the backend server:
+   ```sh
+   npm start
+   ```
+
+### Frontend
+1. Navigate to the `rule-engine-frontend` directory.
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend development server:
+   ```sh
+   npm run dev
+   ```
+
+## Usage
+1. Open the frontend application in your browser.
+2. Use the UI to create, combine, and evaluate rules.
+3. The backend API will handle rule creation, combination, and evaluation.
+
+## API Key Formats
+
+### Evaluate Rule Key Format
+To evaluate a rule in Postman, use the following JSON format:
+```json
+{
+  "ruleId": "66a27c89dca01ec0a644901e",
+  "data": {
+    "age": 40,
+    "department": "Sales",
+    "salary": 60000,
+    "experience": 3
+  }
+}
+```
+
+### Create Rule and Combine Rule Format
+To create or combine a rule in Postman, use the following JSON format:
+```json
+{
+  "rule_string": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
+}
+```
+
+Make sure to install `node_modules` in both the frontend and backend directories by running `npm install` in each respective directory.
+```
+
+This README file now includes instructions to add the database URL in the `.env` file, along with the necessary steps for cloning the repository, setting up, and using the project.
